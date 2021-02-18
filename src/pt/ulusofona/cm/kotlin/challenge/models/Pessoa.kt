@@ -6,7 +6,7 @@ class Pessoa(val nome : String, val dataDeNascimento : Date) : Movimentavel {
 
     var veiculos : MutableList<Veiculo> = mutableListOf<Veiculo>()
     lateinit var carta : Carta
-    lateinit var posicao : Posicao
+    var posicao = Posicao()
 
     fun comprarVeiculo(veiculo : Veiculo){
         veiculos.add(veiculo)

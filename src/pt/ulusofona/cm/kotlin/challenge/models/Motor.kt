@@ -24,4 +24,8 @@ class Motor(var cavalos : Int, var cilindrada : Int ) : Ligavel {
     override fun estaLigado(): Boolean {
         return this.ligado
     }
+
+    override fun toString(): String {
+        return "Motor | $cavalos | $cilindrada)"
+    }
 }
