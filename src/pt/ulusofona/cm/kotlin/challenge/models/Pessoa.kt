@@ -58,6 +58,6 @@ class Pessoa(val nome : String, var dataDeNascimento : Date) : Movimentavel {
         val padrao = "dd-MM-yyyy"
         val simpleDateFormat = SimpleDateFormat(padrao)
         val dataConv = simpleDateFormat.format(dataDeNascimento)
-        return "Pessoa | $nome | ${dataConv} | $posicao)"
+        return "Pessoa | $nome | ${dataConv} | $posicao"
     }
 }
