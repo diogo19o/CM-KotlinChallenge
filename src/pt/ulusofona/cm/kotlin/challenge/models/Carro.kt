@@ -1,5 +1,7 @@
 package pt.ulusofona.cm.kotlin.challenge.models
 
+import java.text.SimpleDateFormat
+
 
 class Carro(identificador: String, var motor: Motor) : Veiculo(identificador){
 
@@ -8,6 +10,9 @@ class Carro(identificador: String, var motor: Motor) : Veiculo(identificador){
     }
 
     override fun toString(): String {
-        return "Carro | $identificador | $dataDeAquisicao | $posicao"
+        val padrao = "dd-MM-yyyy"
+        val simpleDateFormat = SimpleDateFormat(padrao)
+        val dataConv = simpleDateFormat.format(dataDeAquisicao)
+        return "Carro | $identificador | $dataConv | $posicao"
     }
 }
